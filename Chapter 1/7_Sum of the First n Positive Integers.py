@@ -6,5 +6,5 @@ sum = (n)(n + 1)/2
 """
 
 n = int(input("Enter any number: "))
-sumInt = (n)*(n + 1)/2
-print("The sum of all positive numbers from 1 to that number is", sumInt)
+sum_n = (n)*(n + 1)/2
+print("The sum of all positive numbers from 1 to that number is", sum_n)
