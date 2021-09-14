@@ -9,9 +9,9 @@ units and displays the equivalent fuel efficiency in Canadian units.
 # 1mpg = 234.215 l/100km
 # american = float(input("Enter fuel efficiency in MPG: "))
 # canadian = 
-mpg = float(input("Enter the MPG "))
-one_gallon = 3.785411784
-mile2km = 1.609344
+# mpg = float(input("Enter the MPG "))
+# one_gallon = 3.785411784
+# mile2km = 1.609344
 
-mpg_2lkm = ((100 * one_gallon) / (mile2km * mpg))
-print(mpg_2lkm)
+# mpg_2lkm = ((100 * one_gallon) / (mile2km * mpg))
+# print(mpg_2lkm)
