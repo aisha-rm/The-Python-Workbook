@@ -23,5 +23,5 @@ temp = float(input("Enter the temperature of the gas in Kelvin: "))
 r = 8.314 
 
 n = (pressure * volume) / (r * temp)
-print(f"The amount of this gas in moles is {n:.2f}")
+print(f"The number of moles in this gas {n:.2f}")
 
