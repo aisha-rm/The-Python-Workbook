@@ -14,12 +14,20 @@ reasonable output for a value smaller than the quietest noise in the table, and 
 value larger than the loudest noise in the table.
 """
 
-#sounds = {"Jackhammer":130, "Gas Lawnmover":106, "Alarm Clock":70, "Quiet Room":40}
-sounds = (("Jackhammer", 130), ("Gas Lawnmover", 106), ("Alarm Clock", 70), ("Quiet Room", 40))
+noise = {"Jackhammer":130, "Gas Lawnmover":106, "Alarm Clock":70, "Quiet Room":40}
+sounds = [("Jackhammer", 130), ("Gas Lawnmover", 106), ("Alarm Clock", 70), ("Quiet Room", 40)]
+lst = []
+
+for key, value in noise.items():
+    
+    if not value in lst:
+        lst.append(value)
+        
 decibel = int(input("Enter the number of decibels: "))
-if decibel < 40:
+
+if decibel < min(lst):
     print("This is quieter than a Quiet Room")
-elif decibel > 130:
+elif decibel > max(lst):
     print("This is louder than a Jackhammer")
 else:
     # for key, value in sounds.items():
