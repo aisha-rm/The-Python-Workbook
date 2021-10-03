@@ -10,3 +10,17 @@ conversions of less than two human years and for conversions of two or more huma
 years. Your program should display an appropriate error message if the user enters
 a negative number.
 """
+
+age = int(input("Enter your age: "))
+
+if age < 2:
+    years = 10.5 * age
+    print("Your age in dog years is {}".format(years))
+elif age < 0:
+    print("Invalid. Please enter age above 0")
+else:
+    x = 2 * 10.5
+    y = (age - 2) * 4
+    years = x + y
+    print("Your age in dog years is {}".format(years))
+
