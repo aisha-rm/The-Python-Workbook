@@ -26,10 +26,18 @@ statement.
 """
 
 notes = {'C4' : 261.63, 'D4' : 293.66, 'E4' : 329.63, 'F4' : 349.23, 'G4' : 392.00, 'A4' : 440.00, 'B4' : 493.88}
+
+music_notes = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+
 note = input("Please enter a note: ")
 note = note.capitalize()
-if note in notes:
+
+if (len(note) > 2) or (note[0] not in music_notes) or not(note[1].isdigit()):
+    print("{} an invalid musical note. Please try again".format(note))
+
+elif note in notes:
     print(f"The frequency of {note} is {notes[note]} Hz")
+    
 else:
     #separating the note into letter and octave
     letter = note[0]
@@ -37,6 +45,7 @@ else:
     for key, value in notes.items():
         if letter in key:
             freq4 = value   #frequency of letter in 4th octave
+            break           #stop the loop once value is gotten
     freq_new = freq4/(2**(4-octave))    #frequency of entered letter in the octave entered
     
     print(f"The frequency of {note} is {freq_new:.2f}")
