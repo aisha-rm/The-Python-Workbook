@@ -21,7 +21,7 @@ lst = []
 for key, value in noise.items():
     
     if not value in lst:
-        lst.append(value)
+        lst.append(value)  #creating a list of hust the decibels
         
 decibel = int(input("Enter the number of decibels: "))
 
